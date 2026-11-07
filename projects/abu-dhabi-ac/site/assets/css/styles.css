@@ -300,3 +300,69 @@ h1 em{color:#087f8c}
  .process-section{background:radial-gradient(ellipse at 85% 10%,rgba(67,157,177,.22),transparent 35%),linear-gradient(180deg,rgba(9,29,48,.94),rgba(9,29,48,.91)),url("https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat}
  .steps{padding:15px 19px;border-radius:21px}.steps li>b{flex-basis:42px;width:42px;height:42px;border-radius:14px}
 }
+
+
+/* Typography and contrast balancing — calmer premium direction */
+html{font-size:16px}
+body{color:#30485a;background:#f7f9fa}
+h1{font-size:clamp(38px,4.35vw,58px);line-height:1.19;letter-spacing:-.04em;color:#17364d}
+h1 em{color:#287f83}
+.hero-lead{font-size:17px;line-height:1.9;color:#526b7d;max-width:570px}
+.eyebrow{font-size:12px;color:#397e82;letter-spacing:.065em}
+.section-heading h2,.process-layout h2,.contact-layout h2{font-size:clamp(30px,3.35vw,42px);line-height:1.24;letter-spacing:-.035em}
+.section-heading>p:last-child,.muted{font-size:15px;line-height:1.85;color:#687f8f}
+.trust-strip{font-size:13px}
+.trust-strip span{color:#5c7180}
+.service-card h3{font-size:18px;color:#244458}
+.service-card p{font-size:14px;line-height:1.8;color:#647b8b;min-height:unset}
+.service-card>a{font-size:12px}
+.process-section{
+ background:
+  radial-gradient(ellipse at 83% 12%,rgba(94,157,166,.19),transparent 36%),
+  linear-gradient(90deg,rgba(18,43,61,.94) 0%,rgba(18,43,61,.88) 43%,rgba(18,43,61,.72) 100%),
+  url("https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1800") right 48%/cover no-repeat;
+}
+.process-layout .eyebrow{color:#d3bd9a}
+.process-layout h2{color:#f4f6f6}
+.process-layout .muted{font-size:15px;color:#d0dce1}
+.steps{background:linear-gradient(135deg,rgba(255,255,255,.13),rgba(255,255,255,.075));border-color:rgba(255,255,255,.2)}
+.steps li{border-color:rgba(255,255,255,.2)}
+.steps h3{font-size:17px;color:#f2f5f6}
+.steps p{font-size:14px;line-height:1.8;color:#d0dce1}
+.steps li>b{color:#e0c69e;background:rgba(218,187,137,.12);border-color:rgba(218,187,137,.3)}
+.button-primary{background:linear-gradient(135deg,#267f86,#216d76);box-shadow:0 8px 20px rgba(38,127,134,.15)}
+.float-tag{font-size:12px;color:#28475b;box-shadow:0 10px 26px rgba(11,32,53,.09)}
+.art-caption{color:#e4ebee}
+.art-caption b{color:#fff}
+.area-chips span{font-size:13px;color:#496274}
+.faq-list summary{font-size:15px;color:#29475b}
+.faq-list details p{font-size:14px;line-height:1.85;color:#647b8b}
+.contact-layout>div>p:not(.eyebrow){font-size:15px;color:#5e7585}
+.contact-placeholder{font-size:14px;color:#526a7b}
+.request-form label{font-size:13px;color:#355165}
+.request-form input,.request-form select,.request-form textarea{font-size:14px;color:#30485a}
+.request-form small,.form-message{font-size:12px}
+.site-footer{font-size:12px;color:#c5d1d8}
+.site-footer .brand-light{color:#b3c1c9}
+.site-footer>a:last-child{color:#e0c69e}
+@media(max-width:900px){
+ h1{font-size:clamp(36px,5.2vw,48px)}
+ .section-heading h2,.process-layout h2,.contact-layout h2{font-size:clamp(29px,4.5vw,38px)}
+}
+@media(max-width:680px){
+ h1{font-size:clamp(34px,9vw,42px);line-height:1.2}
+ .hero-lead{font-size:16px;line-height:1.85}
+ .section-heading h2,.process-layout h2,.contact-layout h2{font-size:31px}
+ .section-heading>p:last-child,.muted{font-size:14px}
+ .service-card h3{font-size:17px}
+ .service-card p{font-size:13px}
+ .process-section{
+  background:
+   radial-gradient(ellipse at 85% 10%,rgba(94,157,166,.17),transparent 35%),
+   linear-gradient(180deg,rgba(18,43,61,.92),rgba(18,43,61,.88)),
+   url("https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat;
+ }
+ .steps p{font-size:13px}
+ .trust-strip span{font-size:11px}
+ .faq-list summary{font-size:14px}
+}
