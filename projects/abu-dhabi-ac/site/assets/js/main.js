@@ -26,10 +26,13 @@
     form.addEventListener('submit', (event) => {
       event.preventDefault();
       const message = form.querySelector('.form-message');
-      const isArabic = document.documentElement.lang === 'ar';
-      message.textContent = isArabic
-        ? 'شكراً لك! هذا نموذج تجريبي ولم يتم إرسال البيانات.'
-        : 'Thank you! This is a demo form; no information has been sent.';
+      const language = document.documentElement.lang;
+      const messages = {
+        ar: 'شكراً لك! هذا نموذج تجريبي ولم يتم إرسال البيانات.',
+        en: 'Thank you! This is a demo form; no information has been sent.',
+        ru: 'Спасибо! Это демонстрационная форма, данные никуда не отправлены.'
+      };
+      message.textContent = messages[language] || messages.en;
       form.reset();
     });
   }
