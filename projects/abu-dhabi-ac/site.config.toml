@@ -5,4 +5,4 @@ name = "Raha Cooling — Abu Dhabi"
 [build]
 source = "site"
 output = "../../dist/abu-dhabi-ac"
-required_files = ["index.html", "en/index.html"]
+required_files = ["index.html", "en/index.html", "ru/index.html"]
