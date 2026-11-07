@@ -62,8 +62,10 @@ export default {
     }
 
     const ip = request.headers.get("CF-Connecting-IP") || "unknown";
+    const ipDigest = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(ip));
+    const ipHash = Array.from(new Uint8Array(ipDigest), byte => byte.toString(16).padStart(2, "0")).join("");
     const bucket = Math.floor(Date.now() / 600000);
-    const rateKey = `lead:${ip}:${bucket}`;
+    const rateKey = `lead:${ipHash}:${bucket}`;
     const count = Number(await env.RATE_LIMITS.get(rateKey) || "0");
     if (count >= 5) return json({ ok: false, error: "rate_limited" }, 429, allowedOrigin);
     await env.RATE_LIMITS.put(rateKey, String(count + 1), { expirationTtl: 1200 });
