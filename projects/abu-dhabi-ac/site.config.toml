@@ -1,0 +1,8 @@
+# Project-specific build settings. Paths are relative to this project directory.
+[site]
+name = "Raha Cooling — Abu Dhabi"
+
+[build]
+source = "site"
+output = "../../dist/abu-dhabi-ac"
+required_files = ["index.html", "en/index.html"]
