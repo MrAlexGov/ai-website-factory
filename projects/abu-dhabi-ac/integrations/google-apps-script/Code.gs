@@ -51,11 +51,11 @@ function doPost(e) {
 }
 
 function clean_(value, maxLength) {
-  return String(value == null ? "" : value).replace(/[\\u0000-\\u001F\\u007F]/g, " ").trim().slice(0, maxLength);
+  return String(value == null ? "" : value).replace(/[\u0000-\u001F\u007F]/g, " ").trim().slice(0, maxLength);
 }
 
 function safeCell_(value) {
-  return /^[=+@\\-]/.test(value) ? "'" + value : value;
+  return /^[=+@\-]/.test(value) ? "'" + value : value;
 }
 
 function constantTimeEquals_(a, b) {
