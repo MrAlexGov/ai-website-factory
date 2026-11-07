@@ -264,3 +264,39 @@ h1 em{color:#087f8c}
 @media(prefers-reduced-motion:reduce){
   .service-card,.main-nav a:after,.header-cta,.area-chips span{transition:none!important}
 }
+
+/* Editorial photography and layered premium atmosphere */
+.hero-art{isolation:isolate;overflow:hidden;border-radius:30px;background:linear-gradient(135deg,#dce9ed,#b8cbd3);box-shadow:0 28px 75px rgba(11,32,53,.16)}
+.hero-art:before{inset:0;width:100%;height:100%;border-radius:30px;transform:none;background:linear-gradient(115deg,rgba(9,30,48,.04),rgba(9,30,48,.02) 45%,rgba(9,30,48,.22)),url("https://images.pexels.com/photos/38788452/pexels-photo-38788452.jpeg?auto=compress&cs=tinysrgb&w=1600") center 48%/cover no-repeat;z-index:-2}
+.hero-art:after{content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;background:linear-gradient(180deg,rgba(8,27,43,.02) 42%,rgba(8,27,43,.55))}
+.hero-art .orbit,.hero-art .sun-disc,.hero-art .air-conditioner,.hero-art .air-lines{display:none}
+.hero-art .float-tag{background:rgba(250,253,254,.88);color:#12334b;border:1px solid rgba(255,255,255,.72);backdrop-filter:blur(14px);box-shadow:0 12px 32px rgba(7,24,39,.16)}
+.hero-art .tag-top{top:30px;inset-inline-end:28px}
+.hero-art .tag-bottom{bottom:36px;inset-inline-start:28px}
+.hero-art .art-caption{bottom:34px;inset-inline-end:30px;color:rgba(255,255,255,.8);text-align:end;text-shadow:0 2px 12px rgba(0,0,0,.24)}
+.hero-art .art-caption b{color:#fff;font-size:16px}
+.process-section{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 83% 12%,rgba(67,157,177,.27),transparent 34%),linear-gradient(90deg,#091d30 0%,rgba(9,29,48,.97) 39%,rgba(9,29,48,.82) 68%,rgba(9,29,48,.72)),url("https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1800") right 48%/cover no-repeat}
+.process-section:after{width:520px;height:520px;inset-inline-end:-160px;bottom:-330px;border-color:rgba(218,187,137,.24);box-shadow:0 0 0 44px rgba(255,255,255,.025),0 0 0 96px rgba(255,255,255,.018),0 0 0 154px rgba(255,255,255,.012)}
+.process-layout{gap:clamp(45px,8vw,110px)}
+.steps{position:relative;padding:24px 34px;border:1px solid rgba(255,255,255,.16);border-radius:26px;background:linear-gradient(135deg,rgba(255,255,255,.105),rgba(255,255,255,.035));box-shadow:0 28px 80px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.12);backdrop-filter:blur(14px)}
+.steps li{border-color:rgba(255,255,255,.17)}
+.steps li:first-child{border-top:0}
+.steps li:last-child{border-bottom:0}
+.steps li>b{display:grid;place-items:center;flex:0 0 48px;width:48px;height:48px;border:1px solid rgba(218,187,137,.36);border-radius:16px;background:linear-gradient(145deg,rgba(218,187,137,.2),rgba(218,187,137,.06));color:#e5c38f;font-size:17px}
+.process-layout .eyebrow{color:#d8b982}
+.process-layout .eyebrow>span{background:#d8b982}
+.process-layout h2{max-width:480px}
+.process-layout .muted{color:#c3d1da}
+.button-light{border:1px solid rgba(255,255,255,.42);background:rgba(255,255,255,.94);box-shadow:0 12px 28px rgba(0,0,0,.14)}
+.service-card{background:linear-gradient(150deg,#fff,#f8fbfc);box-shadow:0 12px 30px rgba(11,32,53,.045),inset 0 1px 0 #fff}
+.service-icon{background:linear-gradient(145deg,#edf6f7,#dcecef);box-shadow:inset 0 1px 0 #fff,0 7px 18px rgba(8,127,140,.08)}
+.contact-section{background:radial-gradient(ellipse at 8% 100%,rgba(201,155,88,.15),transparent 38%),linear-gradient(120deg,#eaf3f5,#f6f8f8 56%,#f0e8dc)}
+.request-form{border:1px solid rgba(255,255,255,.94);box-shadow:0 30px 75px rgba(11,32,53,.14),inset 0 1px 0 #fff}
+@media(max-width:900px){.process-section{background-position:center,right 48%;background-size:auto,auto,cover}.steps{padding:18px 24px}}
+@media(max-width:680px){
+ .hero-art{height:330px;border-radius:24px}.hero-art:before{border-radius:24px}
+ .hero-art .tag-top{top:18px;inset-inline-end:16px}.hero-art .tag-bottom{bottom:18px;inset-inline-start:16px}
+ .hero-art .art-caption{bottom:20px;inset-inline-end:18px}
+ .process-section{background:radial-gradient(ellipse at 85% 10%,rgba(67,157,177,.22),transparent 35%),linear-gradient(180deg,rgba(9,29,48,.94),rgba(9,29,48,.91)),url("https://images.pexels.com/photos/32497161/pexels-photo-32497161.jpeg?auto=compress&cs=tinysrgb&w=1200") center/cover no-repeat}
+ .steps{padding:15px 19px;border-radius:21px}.steps li>b{flex-basis:42px;width:42px;height:42px;border-radius:14px}
+}
