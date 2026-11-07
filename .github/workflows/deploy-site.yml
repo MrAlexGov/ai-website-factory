@@ -31,6 +31,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Run builder tests
+        run: python -m unittest discover -s tools/site_factory/tests -v
+
       - name: Build and validate site
         run: python tools/site_factory/build.py --project projects/abu-dhabi-ac
 
