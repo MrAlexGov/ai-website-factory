@@ -366,3 +366,38 @@ h1 em{color:#287f83}
  .trust-strip span{font-size:11px}
  .faq-list summary{font-size:14px}
 }
+
+
+/* Abu Dhabi visual identity: regional architecture, desert landscape, no generic appliance stock */
+.hero-art{
+ background:#d8d0c3;
+}
+.hero-art:before{
+ background:
+  linear-gradient(115deg,rgba(13,34,49,.04),rgba(13,34,49,.08) 48%,rgba(13,34,49,.25)),
+  url("https://images.pexels.com/photos/35860067/pexels-photo-35860067.jpeg?auto=compress&cs=tinysrgb&w=1800") center 42%/cover no-repeat;
+}
+.hero-art:after{
+ background:linear-gradient(180deg,rgba(13,34,49,.02) 40%,rgba(13,34,49,.34));
+}
+.process-section{
+ background:
+  radial-gradient(ellipse at 82% 12%,rgba(190,157,111,.2),transparent 34%),
+  linear-gradient(90deg,rgba(18,39,54,.9) 0%,rgba(18,39,54,.78) 45%,rgba(18,39,54,.58) 100%),
+  url("https://images.pexels.com/photos/14741183/pexels-photo-14741183.jpeg?auto=compress&cs=tinysrgb&w=2000") center 52%/cover no-repeat;
+}
+@media(max-width:900px){
+ .process-section{
+  background:
+   radial-gradient(ellipse at 82% 12%,rgba(190,157,111,.18),transparent 34%),
+   linear-gradient(90deg,rgba(18,39,54,.88),rgba(18,39,54,.72)),
+   url("https://images.pexels.com/photos/14741183/pexels-photo-14741183.jpeg?auto=compress&cs=tinysrgb&w=1600") center/cover no-repeat;
+ }
+}
+@media(max-width:680px){
+ .process-section{
+  background:
+   linear-gradient(180deg,rgba(18,39,54,.9),rgba(18,39,54,.82)),
+   url("https://images.pexels.com/photos/14741183/pexels-photo-14741183.jpeg?auto=compress&cs=tinysrgb&w=1400") center/cover no-repeat;
+ }
+}
