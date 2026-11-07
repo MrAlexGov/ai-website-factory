@@ -75,11 +75,8 @@
     return;
   }
 
-  const captcha = document.createElement('div');
-  captcha.className = 'turnstile-widget';
-  captcha.id = 'turnstile-widget';
+  const captcha = form.querySelector('#turnstile-widget');
   const honeypot = form.querySelector('.form-honeypot');
-  form.insertBefore(captcha, button);
   button.textContent = copy.button;
 
   let turnstileToken = '';
