@@ -1,10 +1,12 @@
-name: Deploy Abu Dhabi demo site to GitHub Pages
+name: Build and deploy Abu Dhabi demo site
 
 on:
   push:
     branches: [main]
     paths:
       - "projects/abu-dhabi-ac/site/**"
+      - "projects/abu-dhabi-ac/site.config.toml"
+      - "tools/site_factory/**"
       - ".github/workflows/deploy-site.yml"
   workflow_dispatch:
 
@@ -23,14 +25,22 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build and validate site
+        run: python tools/site_factory/build.py --project projects/abu-dhabi-ac
+
       - name: Configure Pages
         uses: actions/configure-pages@v5
-        with:
-          enablement: true
+
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: projects/abu-dhabi-ac/site
+          path: dist/abu-dhabi-ac
 
   deploy:
     environment:
