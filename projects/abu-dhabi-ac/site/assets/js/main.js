@@ -78,12 +78,7 @@
   const captcha = document.createElement('div');
   captcha.className = 'turnstile-widget';
   captcha.id = 'turnstile-widget';
-  const honeypot = document.createElement('div');
-  honeypot.className = 'form-honeypot';
-  honeypot.setAttribute('aria-hidden', 'true');
-  honeypot.innerHTML = '<label>Leave this field empty<input name="website" type="text" tabindex="-1" autocomplete="off"></label>';
-  const small = form.querySelector('small');
-  form.insertBefore(honeypot, button);
+  const honeypot = form.querySelector('.form-honeypot');
   form.insertBefore(captcha, button);
   button.textContent = copy.button;
 
